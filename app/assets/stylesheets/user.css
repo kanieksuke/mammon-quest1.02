@@ -2,8 +2,16 @@
   display: flex;
 }
 
-.side_bar {
-  width: 300px;
+.side-bar {
+  width: 30vw;
+}
+
+.form-submit {
+  margin-bottom: 20px;
+}
+
+.main {
+  width: 70vw;
 }
 
 * {
