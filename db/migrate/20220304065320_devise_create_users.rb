@@ -7,12 +7,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.integer :target_amount,     null: false
-      t.integer :current_amount,    null: false
       t.integer :target_date,       null: false
-      t.integer :current_date,      null: false
       t.integer :income,            null: false
       t.integer :fixed_cost,        null: false
-      t.date :attack_date
 
       ## Recoverable
       t.string   :reset_password_token
