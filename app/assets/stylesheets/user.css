@@ -1,3 +1,11 @@
+.wrapper {
+  display: flex;
+}
+
+.side_bar {
+  width: 300px;
+}
+
 * {
   color: white;
   background-color: black;
