@@ -13,10 +13,16 @@
       <%= image_tag 'pose-akuma2.jpeg' %>
     </div>
     <div class="text">
-      <p>HP:<%= @user.target_amount %></p>
+      HP:
+      <em><%= @user.target_amount %></em>
+      /
+      <em><%= @user.target_amount %></em>
     </div>
     <div class="text">
-      MP:0
+      MP:
+      <em>0</em>
+      /
+      <em><%= @user.target_date %></em>
     </div>
   </div>
 </div>
