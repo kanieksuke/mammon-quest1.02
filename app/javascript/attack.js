@@ -11,13 +11,15 @@ const budget = () => {
   const damageStatus = document.getElementById("damage_status");
   damageStatus.innerHTML = `${attackVal}`;
 
-  const currentHp = document.getElementById("current_hp");
-  const displayHp = gon.user_target_amount
-  currentHp.innerHTML = `${displayHp}`
+  const displayCurrentHp = document.getElementById("current_hp");
+  const maxHp = gon.user_target_amount
+  const currentHp = maxHp
+  displayCurrentHp.innerHTML = `${currentHp}`
 
   const attack = document.getElementById("attack_button");
   attack.addEventListener("click", () => {
-    console.log(attackVal);
+    const residueHp = currentHp - attackVal
+    displayCurrentHp.innerHTML = `${residueHp}`;
   });
 };
 
