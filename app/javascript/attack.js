@@ -10,6 +10,11 @@ const budget = () => {
   const attackVal = Math.trunc(attackValTrue)
   const damageStatus = document.getElementById("damage_status");
   damageStatus.innerHTML = `${attackVal}`;
+
+  const currentHp = document.getElementById("current_hp");
+  const displayHp = gon.user_target_amount
+  currentHp.innerHTML = `${displayHp}`
+
   const attack = document.getElementById("attack_button");
   attack.addEventListener("click", () => {
     console.log(attackVal);

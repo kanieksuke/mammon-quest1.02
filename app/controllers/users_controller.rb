@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = current_user
+    gon.user_target_amount = @user.target_amount
     gon.user_income = @user.income
     gon.user_fixed_cost = @user.fixed_cost
   end
