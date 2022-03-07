@@ -1,12 +1,18 @@
 const budget = () => {
-  let d = new Date
-  let lastDate = new Date(d.getFullYear, d.getMonth, 0)
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth() + 1;
+  const lastDay = new Date(year, month, 0);
+  const day = lastDay.getDate();
   const userIncome = gon.user_income
   const userFixedCost = gon.user_fixed_cost
-  const attackVal = (userIncome - userFixedCost)
+  const attackValTrue = (userIncome - userFixedCost) / day;
+  const attackVal = Math.trunc(attackValTrue)
+  const damageStatus = document.getElementById("damage_status");
+  damageStatus.innerHTML = `${attackVal}`;
   const attack = document.getElementById("attack_button");
   attack.addEventListener("click", () => {
-    console.log(attackVal)
+    console.log(attackVal);
   });
 };
 

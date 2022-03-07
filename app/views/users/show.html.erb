@@ -7,11 +7,11 @@
       </div>
       <input class="form-submit" type="submit" value="買物をする">
     </div>
-    <input class='income' income='@user.income'>
-    <input class='fixed_cost' fixed_cost='@user.fixed_cost'>
-    <span><%= d = Date.new(Time.now.year, Time.now.month, -1).day %></span>
-    <div class="status">
-      想定ダメージ:<span id='damage'></span>
+    <input type="hidden" class='income' income='@user.income'>
+    <input type="hidden" class='fixed_cost' fixed_cost='@user.fixed_cost'>
+    <div class="damage">
+      <span>想定ダメージ:</span>
+      <span id="damage_status"></span>
     </div>
   </div>
   <div class="main">
